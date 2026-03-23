@@ -39,9 +39,13 @@ public class App {
 
             } else if (c.equals("callist")) {
                 ArrayList<Integer> calList = cal.getCalList();
+                System.out.println("계산기록은: ");
                 for (Integer callist : calList){
                     System.out.println(callist);
                 }
+            } else if (c.equals("remove")) {
+                cal.remove();
+                
             }
 
         }

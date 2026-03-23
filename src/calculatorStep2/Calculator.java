@@ -37,5 +37,10 @@ public class Calculator {
     public void setCalList(ArrayList<Integer> calList) {
         this.calList = calList;
     }
+
+    public void remove() {
+        int removeCallist = calList.remove(0);
+        System.out.println(" 기록이 삭제되었습니다. " + removeCallist);
+    }
 }
 
