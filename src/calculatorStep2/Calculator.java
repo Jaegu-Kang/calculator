@@ -8,25 +8,25 @@ public class Calculator {
 
     int sum(int a, int b) {
         int result = a + b;
-        calList.add(a + "+" + b + "=" + result);
+        calList.add(a + " + " + b + " = " + result);
         return result;
     }
 
     int sub(int a, int b) {
         int result = a - b;
-        calList.add(a + "-" + b + "=" + result);
+        calList.add(a + " - " + b + " = " + result);
         return result;
     }
 
     int mul(int a, int b) {
         int result = a * b;
-        calList.add(a + "*" + b + "=" +result);
+        calList.add(a + " * " + b + " = " +result);
         return result;
     }
 
     int div(int a, int b) {
         int result = a / b;
-        calList.add(a + "/" + b + "=" + result);
+        calList.add(a + " / " + b + " = " + result);
         return result;
     }
 

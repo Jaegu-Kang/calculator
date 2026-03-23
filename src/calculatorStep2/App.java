@@ -19,7 +19,8 @@ public class App {
                 case "callist":
                     ArrayList<String> callist = cal.getCalList();
                     for (String calList : callist)
-                    System.out.println("계산 기록은: " + calList);
+                    System.out.println("계산 기록은: ");
+                    System.out.println(callist);
                     break;
                 case "remove":
                     cal.remove();
@@ -32,16 +33,16 @@ public class App {
                     int b = sc.nextInt();
 
                     if (c.equals("+")){
-                        System.out.println("결과는: " + cal.sum(a, b));
+                        System.out.println("결과 " + a + " + " + b + " = " + cal.sum(a, b));
                     } else if (c.equals("-")) {
-                        System.out.println("결과는: " + cal.sub(a, b));
+                        System.out.println("결과 " + a + " - " + b + " = " + cal.sub(a, b));
                     } else if (c.equals("*")) {
-                        System.out.println("결과는: " + cal.mul(a, b));
+                        System.out.println("결과 " + a + " * " + b + " = " + cal.mul(a, b));
                     } else if (c.equals("/")) {
                         if (b == 0){
-                            System.out.println("나눈셈 연산에서 분모에 0이 입력될수 없습니다.");
+                            System.out.println("나눗셈 연산에서 분모에 0이 입력될수 없습니다.");
                         } else {
-                            System.out.println("결과는: " + cal.div(a,b));
+                            System.out.println("결과 " + a + " / " + b + " = " + cal.div(a,b));
                         }
                 }
             }
