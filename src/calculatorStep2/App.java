@@ -18,9 +18,10 @@ public class App {
                     return;
                 case "callist":
                     ArrayList<String> callist = cal.getCalList();
-                    for (String calList : callist)
                     System.out.println("계산 기록은: ");
-                    System.out.println(callist);
+                    for (String calList : callist) {
+                        System.out.println(calList);
+                    }
                     break;
                 case "remove":
                     cal.remove();
@@ -46,6 +47,10 @@ public class App {
                         }
                 }
             }
+        }
+    }
+}
+
 
 //            System.out.println("첫번째 숫자를 입력하세요: ");
 //            int a = sc.nextInt();
@@ -79,7 +84,3 @@ public class App {
 //                cal.remove();
 //
 //            }
-
-        }
-    }
-}
