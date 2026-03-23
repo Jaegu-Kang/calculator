@@ -27,7 +27,11 @@ public class Main {
             } else if (c.equals("*")) {
                 System.out.println("결과 = " + (a * b));
             } else if (c.equals("/")) {
-                System.out.println("결과 = " + (a - b));
+                if (b == 0){
+                    System.out.println("나눗셈 연산에서 분모에 0이 입력될수 없습니다.");
+                } else {
+                    System.out.println("결과 = " + (a - b));
+                }
             }
 
 
