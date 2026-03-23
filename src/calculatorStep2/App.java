@@ -17,8 +17,8 @@ public class App {
                     System.out.println("계산기를 종료합니다");
                     return;
                 case "callist":
-                    ArrayList<Integer> callist = cal.getCalList();
-                    for (Integer calList : callist)
+                    ArrayList<String> callist = cal.getCalList();
+                    for (String calList : callist)
                     System.out.println("계산 기록은: " + calList);
                     break;
                 case "remove":
