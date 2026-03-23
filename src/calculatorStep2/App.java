@@ -1,5 +1,8 @@
 package calculatorStep2;
 
+import java.util.AbstractList;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class App {
@@ -34,7 +37,13 @@ public class App {
                     System.out.println("결과 = " + cal.div(a, b));
                 }
 
+            } else if (c.equals("callist")) {
+                ArrayList<Integer> calList = cal.getCalList();
+                for (Integer callist : calList){
+                    System.out.println(callist);
+                }
             }
+
         }
     }
 }
