@@ -18,7 +18,7 @@ public class App {
             System.out.println("두번째 숫자를 입력하세요: ");
             int b = sc.nextInt();
 
-            System.out.println("사칙연산 기호를 입력하세요: (종료하려면 exit를 입력하세요) ");
+            System.out.println("사칙연산 기호를 입력하세요: (종료하려면 exit를 입력, 기록확인은 callist 입력) ");
             String c = sc.next();
 
             if (c.equals("exit")) {
