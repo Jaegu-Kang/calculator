@@ -9,29 +9,30 @@ public class ArithmeticCalculator {
     // 수식 전체를 보기좋게 저장하기 위해 String 타입으로 수정했습니다.
     private ArrayList<String> record = new ArrayList<>();
     //덧셈 연산을 수행하고 그 결과를 저장합니다.
-    int sum(int a, int b) {
-        int result = a + b;
-        record.add(a + " + " + b + " = " + result);
+    public int calculate(int a, int b, OperatorType type) {
+        int result = 0;
+
+        switch (type) {
+            case SUM:
+                result = a + b;
+                record.add(a + " + " + b + " = " + result);
+                break;
+            case SUB:
+                result = a - b;
+                record.add(a + " - " + b + " = " + result);
+                break;
+            case MUL:
+                result = a * b;
+                record.add(a + " * " + b + " = " + result);
+                break;
+            case DIV:
+                result = a / b;
+                record.add(a + " / " + b + " = " + result);
+                break;
+        }
         return result;
     }
-    // 뺄셈 연산을 수행하고 그 결과를 저장합니다.
-    int sub(int a, int b) {
-        int result = a - b;
-        record.add(a + " - " + b + " = " + result);
-        return result;
-    }
-    // 곱셈 연산을 수행하고 그 결과를 저장합니다.
-    int mul(int a, int b) {
-        int result = a * b;
-        record.add(a + " * " + b + " = " +result);
-        return result;
-    }
-    // 나눗셈 연산을 수행하고 그 결과를 저장합니다.
-    int div(int a, int b) {
-        int result = a / b;
-        record.add(a + " / " + b + " = " + result);
-        return result;
-    }
+
     // 누적된 계산 기록을 반환합니다.
     public ArrayList<String> getRecord() {
         return this.record;
@@ -46,3 +47,27 @@ public class ArithmeticCalculator {
         System.out.println("기록이 삭제되었습니다. " + removeRecord);
     }
 }
+
+//    int sum(int a, int b) {
+//        int result = a + b;
+//        record.add(a + " + " + b + " = " + result);
+//        return result;
+//    }
+//    // 뺄셈 연산을 수행하고 그 결과를 저장합니다.
+//    int sub(int a, int b) {
+//        int result = a - b;
+//        record.add(a + " - " + b + " = " + result);
+//        return result;
+//    }
+//    // 곱셈 연산을 수행하고 그 결과를 저장합니다.
+//    int mul(int a, int b) {
+//        int result = a * b;
+//        record.add(a + " * " + b + " = " +result);
+//        return result;
+//    }
+//    // 나눗셈 연산을 수행하고 그 결과를 저장합니다.
+//    int div(int a, int b) {
+//        int result = a / b;
+//        record.add(a + " / " + b + " = " + result);
+//        return result;
+//    }

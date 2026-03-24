@@ -1,6 +1,6 @@
 package calculatorStep3;
 
-import calculatorStep2.Calculator;
+import calculatorStep3.ArithmeticCalculator;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -10,7 +10,7 @@ public class App {
     public static void main(String[] args) {
 
         // 계산 기록을 담당할 Calculator 객체를 생성합니다.
-        Calculator cal = new Calculator();
+        ArithmeticCalculator cal = new ArithmeticCalculator();
         // 사용자의 입력을 받기 위한 Scanner 객체를 생성합니다
         Scanner sc = new Scanner(System.in);
         // exit를 입력하기 전까지 반복되는 계산기 실행
