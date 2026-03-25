@@ -22,6 +22,7 @@ public class App {
             System.out.println("기록삭제:        remove    입력");
             System.out.println("기록검색(큰수):   search1   입력");
             System.out.println("기록검색(작은수): search2   입력");
+            System.out.println("기록검색(같은수): search3   입력");
             System.out.print("원하는 메뉴를 입력하세요:");
             // 사용자가 입력한 문자열을 읽어 옵니다.
             String menu = sc.next();
@@ -51,7 +52,7 @@ public class App {
                     System.out.print("숫자 입력: ");
                     double thisNum1 = sc.nextDouble();
                     System.out.println("검색 결과는: ");
-                    cal.biggertThan(thisNum1);
+                    cal.biggerThan(thisNum1);
                     break;
                 // 입력 받은 문자가 search2일때 입력한 값보다 작은 값을 검색하는 기능
                 case "search2":
@@ -59,8 +60,17 @@ public class App {
                     System.out.print("숫자 입력: ");
                     double thisNum2 = sc.nextDouble();
                     System.out.println("검색 결과는: ");
-                    cal.smallThan(thisNum2);
+                    cal.smallerThan(thisNum2);
                     break;
+                // 입력 받은 문자가 search3일때 입력한 값과 같은 값을 검색하는 기능
+                case "search3":
+                    System.out.println("어떤 값과 같은 값을 검색할까요?");
+                    System.out.println("숫자 입력: ");
+                    double thisNum3 = sc.nextDouble();
+                    System.out.println("검색 결과는: ");
+                    cal.equalTo(thisNum3);
+                    break;
+
 
                 // 입력 받은 문자가 사칙 연산 기록일때
                 case "+", "-", "*", "/" :

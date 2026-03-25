@@ -42,7 +42,7 @@ public class Main {
                     System.out.println("나눗셈 연산에서 분모에 0이 입력될수 없습니다.");
                 }// 아니라면 a, b 를 나누고 결과를 출력합니다.
                 else {
-                    System.out.println("결과 = " + (a - b));
+                    System.out.println("결과 = " + (a / b));
                 }
             }
 
