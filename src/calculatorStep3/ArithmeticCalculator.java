@@ -4,32 +4,15 @@ import java.util.ArrayList;
 
 public class ArithmeticCalculator {
 
-    // 기록 저장을 위한 Arraylist 생성
-    // 처음에 Integer로 설정했으나 기록이 123, 456, 789 처럼 가독성이 떨어지게 출력되어
-    // 수식 전체를 보기좋게 저장하기 위해 String 타입으로 수정했습니다.
-    private ArrayList<String> record = new ArrayList<>();
-    //덧셈 연산을 수행하고 그 결과를 저장합니다.
-    public int calculate(int a, int b, OperatorType type) {
-        int result = 0;
 
-        switch (type) {
-            case SUM:
-                result = a + b;
-                record.add(a + " + " + b + " = " + result);
-                break;
-            case SUB:
-                result = a - b;
-                record.add(a + " - " + b + " = " + result);
-                break;
-            case MUL:
-                result = a * b;
-                record.add(a + " * " + b + " = " + result);
-                break;
-            case DIV:
-                result = a / b;
-                record.add(a + " / " + b + " = " + result);
-                break;
-        }
+    private ArrayList<String> record = new ArrayList<>();
+
+    public int calculate(int a, int b, OperatorType type) {
+        int result = type.cal(a, b);
+
+        record.add(a + type.getType() + b +" = " + result);
+
+
         return result;
     }
 
