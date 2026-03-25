@@ -1,7 +1,5 @@
 package calculatorStep3;
 
-import calculatorStep3.ArithmeticCalculator;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -10,7 +8,8 @@ public class App {
     public static void main(String[] args) {
 
         // 계산 기록을 담당할 Calculator 객체를 생성합니다.
-        ArithmeticCalculator cal = new ArithmeticCalculator();
+        // 제네릭 사용에 따른 타입 명시
+        ArithmeticCalculator<Double> cal = new ArithmeticCalculator<>();
         // 사용자의 입력을 받기 위한 Scanner 객체를 생성합니다
         Scanner sc = new Scanner(System.in);
         // exit를 입력하기 전까지 반복되는 계산기 실행
@@ -47,27 +46,26 @@ public class App {
                 // 입력 받은 문자가 사칙 연산 기록일때
                 case "+", "-", "*", "/" :
                     // 첫번째 숫자를 입력 받습니다.
+                    // 소숫점 입력도 받을 수 있도록 double 타입으로 변경
                     System.out.println("첫번째 숫자를 입력하세요: ");
-                    int a = sc.nextInt();
+                    double a = sc.nextDouble();
                     // 두번째 숫자를 입력 받습니다.
+                    // 소숫점 입력도 받을 수 있도록 double 타입으로 변경
                     System.out.println("두번째 숫자를 입력하세요: ");
-                    int b = sc.nextInt();
-                    // 입력 받은 문자가 + 일때 덧셈 연산을 수행하는 메서드를 Calculator 객체에서 호출하고 그 결과를 출력합니다.
+                    double b = sc.nextDouble();
+                    // 입력 받은 문자에 맞춰 enum을 calculate 메서드에 전달합니다.
                     if (menu.equals("+")){
-                        System.out.println("결과 " + a + " + " + b + " = " + cal.sum(a, b));
-                        // 입력 받은 문자가 - 일때 뺄셈 연산을 수행하는 메서드를 Calculator 객체에서 호출하고 그 결과를 출력합니다.
+                        System.out.println("결과 " + a + " + " + b + " = " + cal.calculate(a, b, OperatorType.SUM));
                     } else if (menu.equals("-")) {
-                        System.out.println("결과 " + a + " - " + b + " = " + cal.sub(a, b));
-                        // 입력 받은 문자가 * 일때 곱셈 연산을 수행하는 메서드를 Calculator 객체에서 호출하고 그 결과를 출력합니다.
+                        System.out.println("결과 " + a + " - " + b + " = " + cal.calculate(a, b, OperatorType.SUB));
                     } else if (menu.equals("*")) {
-                        System.out.println("결과 " + a + " * " + b + " = " + cal.mul(a, b));
-                        // 입력 받은 문자가 / 일때 나눗셈 연산을 수행하는 메서드를 Calculator 객체에서 호출하고 그 결과를 출력합니다.
+                        System.out.println("결과 " + a + " * " + b + " = " + cal.calculate(a, b, OperatorType.MUL));
                     } else if (menu.equals("/")) {
                         // 만약 입력 받은 두번째 숫자가 0일 경우 에러 메세지를 출력합니다.
                         if (b == 0){
                             System.out.println("나눗셈 연산에서 분모에 0이 입력될수 없습니다.");
                         } else {
-                            System.out.println("결과 " + a + " / " + b + " = " + cal.div(a,b));
+                            System.out.println("결과 " + a + " / " + b + " = " + cal.calculate(a, b, OperatorType.DIV));
                         }
                     }
             }

@@ -2,14 +2,22 @@ package calculatorStep3;
 
 import java.util.ArrayList;
 
-public class ArithmeticCalculator {
+public class ArithmeticCalculator<T extends Number> {
 
-
+    // 계산 기록을 저장하는 리스트
     private ArrayList<String> record = new ArrayList<>();
+    // enum을 활용하여 연산 메서드를 통합
+    // 매개변수 a, b를 타입 T로 변경, 반환타입을 double로 변경: 나중에 발견
+    public double calculate(T a, T b, OperatorType type) {
 
-    public int calculate(int a, int b, OperatorType type) {
-        int result = type.cal(a, b);
+        // T로 들어온 값을 모두 double로 변경
+        double a1 = a.doubleValue();
+        double b1 = b.doubleValue();
 
+        // enum에게 a, b를 넘겨줍니다.
+        double result = type.cal(a1, b1);
+
+        // 기록을 저장합니다.
         record.add(a + type.getType() + b +" = " + result);
 
 

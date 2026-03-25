@@ -13,10 +13,10 @@ public enum OperatorType {
     private final String type;
 
     // 두개의 int를 받아 하나의 int로 반환
-    private final BiFunction<Integer, Integer, Integer> oper;
+    private final BiFunction<Double, Double, Double> oper;
 
     // 생성자
-    OperatorType(String type, BiFunction<Integer, Integer, Integer> oper) {
+    OperatorType(String type, BiFunction<Double, Double, Double> oper) {
         this.type = type;
         this.oper = oper;
     }
@@ -25,7 +25,7 @@ public enum OperatorType {
     public String getType()
     {return type;}
     // 외부에서 a, b가 들어오면 저장해둔 람다식을 실행해주는 메서드
-    public int cal(int a, int b) {
+    public Double cal(Double a, Double b) {
         return oper.apply(a, b);
     }
 }
