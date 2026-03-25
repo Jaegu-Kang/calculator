@@ -32,6 +32,7 @@ public class ArithmeticCalculator<T extends Number> {
     }
 
     // 스트림을 활용한 조회 메서드
+    // 입력받은 값보다 큰 계산 결과를 출력합니다.
     public void biggertThan(double thisNum1) {
         // 계산 결과 값을 스트림에 호출합니다.
         results.stream()
@@ -39,7 +40,7 @@ public class ArithmeticCalculator<T extends Number> {
                 .filter(result -> result > thisNum1)
                 .forEach(result -> System.out.println(result));
     }
-
+    // 입력받은 값보다 작은 계산 결과를 출력합니다.
     public void smallThan(double thisNum2) {
         results.stream()
                 .filter(result -> result < thisNum2)
