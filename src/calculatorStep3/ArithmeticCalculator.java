@@ -40,6 +40,12 @@ public class ArithmeticCalculator<T extends Number> {
                 .forEach(result -> System.out.println(result));
     }
 
+    public void smallThan(double thisNum) {
+        results.stream()
+                .filter(result -> result < thisNum)
+                .forEach(result -> System.out.println(result));
+    }
+
     // 누적된 계산 기록을 반환합니다.
     public ArrayList<String> getRecord() {
         return this.record;

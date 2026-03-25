@@ -16,11 +16,12 @@ public class App {
         while (true) {
             // 사용자에게 보여주는 메뉴 화면을 출력합니다.
             System.out.println("======= 메뉴 선택 =======");
-            System.out.println("계산:    +, -, *, /  입력");
-            System.out.println("종료:      exit      입력");
-            System.out.println("기록확인:   record    입력");
-            System.out.println("기록삭제:   remove    입력");
-            System.out.println("기록검색:   search    입력");
+            System.out.println("계산:       +, -, *, /    입력");
+            System.out.println("종료:           exit      입력");
+            System.out.println("기록확인:        record    입력");
+            System.out.println("기록삭제:        remove    입력");
+            System.out.println("기록검색(큰수):   search    입력");
+            System.out.println("기록검색(작은수): search2   입력");
             System.out.print("원하는 메뉴를 입력하세요:");
             // 사용자가 입력한 문자열을 읽어 옵니다.
             String menu = sc.next();
@@ -49,6 +50,11 @@ public class App {
                     double thisNum = sc.nextDouble();
                     System.out.println("검색 결과는: ");
                     cal.resultThan(thisNum);
+                    break;
+                case "search2":
+                    double thisNum2 = sc.nextDouble();
+                    System.out.println("검색 결과는: ");
+                    cal.smallThan(thisNum2);
                     break;
 
                 // 입력 받은 문자가 사칙 연산 기록일때
