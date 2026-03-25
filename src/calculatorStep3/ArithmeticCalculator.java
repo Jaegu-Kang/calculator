@@ -2,6 +2,7 @@ package calculatorStep3;
 
 import java.util.ArrayList;
 
+// 숫자 타입만 받을수 있도록 고정
 public class ArithmeticCalculator<T extends Number> {
 
     // 계산 기록을 저장하는 리스트
