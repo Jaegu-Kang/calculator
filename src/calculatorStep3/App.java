@@ -25,7 +25,7 @@ public class App {
             System.out.print("원하는 메뉴를 입력하세요:");
             // 사용자가 입력한 문자열을 읽어 옵니다.
             String menu = sc.next();
-            // 입력한 문제열에 따라서 기능을 수행하기 위한 switch 문
+            // 입력한 문자열에 따라서 기능을 수행하기 위한 switch 문
             switch (menu) {
                 // 입력 받은 문자가 exit 일때 프로그램을 종료합니다.
                 case "exit":
