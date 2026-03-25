@@ -32,17 +32,17 @@ public class ArithmeticCalculator<T extends Number> {
     }
 
     // 스트림을 활용한 조회 메서드
-    public void resultThan(double thisNum) {
+    public void biggertThan(double thisNum1) {
         // 계산 결과 값을 스트림에 호출합니다.
         results.stream()
                 // 입력한 값 thisNum 보다 큰값만 걸러내고 그 값을 출력합니다.
-                .filter(result -> result > thisNum)
+                .filter(result -> result > thisNum1)
                 .forEach(result -> System.out.println(result));
     }
 
-    public void smallThan(double thisNum) {
+    public void smallThan(double thisNum2) {
         results.stream()
-                .filter(result -> result < thisNum)
+                .filter(result -> result < thisNum2)
                 .forEach(result -> System.out.println(result));
     }
 

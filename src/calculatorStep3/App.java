@@ -20,7 +20,7 @@ public class App {
             System.out.println("종료:           exit      입력");
             System.out.println("기록확인:        record    입력");
             System.out.println("기록삭제:        remove    입력");
-            System.out.println("기록검색(큰수):   search    입력");
+            System.out.println("기록검색(큰수):   search1   입력");
             System.out.println("기록검색(작은수): search2   입력");
             System.out.print("원하는 메뉴를 입력하세요:");
             // 사용자가 입력한 문자열을 읽어 옵니다.
@@ -45,13 +45,18 @@ public class App {
                 case "remove":
                     cal.remove();
                     break;
-                // 입력한 값보다 큰 값을 겁색하는 기능
-                case "search":
-                    double thisNum = sc.nextDouble();
+                // 입력 받은 문자가 search1일때 입력한 값보다 큰 값을 검색하는 기능
+                case "search1":
+                    System.out.println("어떤 값보다 큰 값을 검색할까요?");
+                    System.out.print("숫자 입력: ");
+                    double thisNum1 = sc.nextDouble();
                     System.out.println("검색 결과는: ");
-                    cal.resultThan(thisNum);
+                    cal.biggertThan(thisNum1);
                     break;
+                // 입력 받은 문자가 search2일때 입력한 값보다 작은 값을 검색하는 기능
                 case "search2":
+                    System.out.println("어떤 값보다 작은 값을 검색할까요?");
+                    System.out.print("숫자 입력: ");
                     double thisNum2 = sc.nextDouble();
                     System.out.println("검색 결과는: ");
                     cal.smallThan(thisNum2);
